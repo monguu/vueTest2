@@ -1,21 +1,29 @@
 <template>
   <div class="about">
-    <h1>This is an about page</h1>
-    <KwonguCoding />
+    <div>
+      <KwonguCoding>
+        <template #header="{ kwongu }">
+          <p>header1 {{ kwongu }}</p>
+        </template>
+        <!-- v-=slot  ====> #  축약 -->
+        <template #default>
+          <p>body1</p>
+        </template>
+      </KwonguCoding>
+    </div>
   </div>
 </template>
 
 <script>
-import KwonguCoding from '@/components/kwongucoding'
+import KwonguCoding from "@/components/kwongucoding";
 export default {
   components: {
     KwonguCoding,
   },
-  data () {
+  data() {
     return {
-      title: 5
-    }
-  }
-  
-}
+      // title: 5,
+    };
+  },
+};
 </script>
