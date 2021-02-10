@@ -1,18 +1,37 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+  <div>
+    
+    <h1>
+      Kwongu Kim,Coding
+    </h1>
+    <KwonguCoding title="home title" name="kwongu name"/>
   </div>
+  
 </template>
 
-<script>
-// @ is an alias to /src
-import HelloWorld from "@/components/HelloWorld.vue";
 
+<script>
+import KwonguCoding from '@/components/kwongucoding.vue'
 export default {
-  name: "Home",
   components: {
-    HelloWorld
+    KwonguCoding,
+},
+  data() {
+    return{
+      name: 'kwongu'
+    }
   }
-};
+}
 </script>
+
+<style scoped>
+h1 {
+  color: rgb(13, 33, 122);
+}
+p {
+  font-size: 30px;
+  color: salmon
+  
+}
+
+</style>
